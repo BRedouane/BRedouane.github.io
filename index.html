@@ -6,40 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redouane Benomar</title>
     <style>
-        .couleur_text{
-            color: white;
-        }
         .image_sur_largeur{
-            width: 100%;
-            
+            width: 1653px ;
+        }
+        .ruban{
+            width: 1653px;
+            height: 100px;
+            opacity: 0.1;
         }
         .conteneur {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.centrer {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.tableau{ 
-    width: 300px;
-    text-align: left;
-}
+        position: relative;
+        text-align: center;
+        color: black;
+        }
+        .text_dans_image {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: black;
+        }
+        .tableau{ 
+            width: 300px;
+            text-align: left;
+        }
+        .tableau_largeur{ 
+            width: 100%;
+        }
+        .text_left{
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        }
+        .text_right{
+        position: absolute;
+        top: 10px;
+        left: 1514px;
+        }
+        
     </style>
 </head>
 
 <body>
-    <div class="conteneur">
-        <h1 class="centrer">Redouane</h1>
     
-        <img src="image.jpg" alt="test" class="image_sur_largeur">
+
+    <div class="conteneur">
+        <img src="SALON MARROCAN NO WALL.jpg" alt="test" class="image_sur_largeur">
+        <h1 class="text_left">produits</h1>
+        <h1 class="text_right">connexion</h1>
+
     </div>
-    <table class="tableau">
+    
+    </table>
+    <div class="conteneur">
+        <table class="text_dans_image" class="tableau">
         <tr>
-            <th>contact:</th>
+            <th >contact:</th>
         </tr>
         <tr>
             <td>nom et prenom: </td>
@@ -53,6 +76,9 @@
             <td>courrielle: </td>
             <td>redouane@gmail.com</td>
         </tr>
-    </table>
+        <img src="fond-gris-moyen-300x169.jpg" alt="couleur vert comme ruban" class="ruban">
+    </div>
+    
+    
 </body>
 </html>
