@@ -9,11 +9,65 @@
         .image_sur_largeur{
             width: 1653px ;
         }
+
+        .image_sur_largeur2{
+            width: 1825px ;
+            height: 100px;
+        }
+        .desctiption{
+            width: 1000px;
+            position: relative;
+
+            left: -424px;
+        }
+        .desctiption2{
+            width: 1000px;
+            position: relative;
+            right: -420px;
+        }
+
         .ruban{
-            width: 1653px;
+            width: 1835px;
             height: 100px;
             opacity: 0.1;
         }
+        .button {
+        
+        border: none;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 36px;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        }
+        .button1 {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        background-color: white; 
+        color: black; 
+        }
+        .button2 {
+        position: absolute;
+        top: 10px;
+        left: 1610px;
+        background-color: white; 
+        color: black; 
+        }
+
+        .button1:hover {
+        background-color: black;
+        color: white;
+        }
+
+        .button2:hover {
+        background-color: black;
+        transition-duration: 0.5s;
+        color: white;
+        }
+
         .conteneur {
         position: relative;
         text-align: center;
@@ -50,15 +104,14 @@
 
 <body>
     
-
+   <img src="bord.jpg" alt="bord du haut" class="image_sur_largeur2" >
     <div class="conteneur">
         <img src="SALON MARROCAN NO WALL.jpg" alt="test" class="image_sur_largeur">
-        <h1 class="text_left">produits</h1>
-        <h1 class="text_right">connexion</h1>
+        <h1 class="button button1">produits</h1>
+        <h1 class="button button2">connexion</h1>
 
     </div>
-    
-    </table>
+
     <div class="conteneur">
         <table class="text_dans_image" class="tableau">
         <tr>
@@ -78,7 +131,8 @@
         </tr>
         <img src="fond-gris-moyen-300x169.jpg" alt="couleur vert comme ruban" class="ruban">
     </div>
-    
+    <img src="description de l'artisan.jpg" alt="description de l'artisan" class="desctiption">
+    <img src="description des objet.jpg" alt="description de l'artisan" class="desctiption2">
     
 </body>
 </html>
