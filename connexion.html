@@ -6,35 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page de connexion/ Red1</title>
     <style>
-        .p_absolue{
+       
+        input{
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            }
+            
+        
+
+        .position {
             position: absolute;
-            top: 500px;
-        left: 1300px;
+            bottom: 30%;
+            right: 15%;
+            }
+        .position_connexion {
+            position: absolute;
+            bottom: 20%;
+            right: 15%;
+            }
+        
+        
+        .button {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        }
+        /* pris dans : https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+        /*W3School*/
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
         }
 
-        .taille_text{
-            font-size: xx-large;
+        .button span:after {
+        content: '\00bb';
+        opacity: 0;
+        transition: 0.5s;
         }
-        .taille_box{
-            size: 100px;
+
+        .button:hover span {
+        padding-right: 25px;
         }
+
+        .button:hover span:after {
+        opacity: 1;
+        }
+        /*jusqu'ici*/
 
     </style>
 </head>
 <body>
+    <div>
     <img src="page de connexion.jpg" alt="fond" width="100%" height="auto">
-
-    <div class="p_absolue">
-        <form>
-          <label class="taille_text">Identifiant :</label>
-          <p></p>
-          <input placeholder="ID ou Email">
-              <p></p>
-          <label class="taille_text">mot de passe :</label>
-          <p> </p>
-          <input placeholder="Mot de passe">
-        </form>
+    <form class="position">
+        <strong><label>Identifiant : </label></strong>
+        <p></p>
+        <input>
+        <p></p>
+        <strong><label>Mot de passe : </label></strong>
+        <p></p>
+        <input type="password">
+      </form>
+      <p></p>
+      <div class="position_connexion"><button class="button"><span>Connexion</span></button><p><a href=""></a></p></div>
     </div>
-    
 </body>
 </html>
