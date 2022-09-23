@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page de connexion/ Red1</title>
+    <style>
+       
+        input{
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            }
+            
+        .position {
+            position: absolute;
+            bottom: 20%;
+            right: 20%;
+            }
+        .position_inscription {
+            position: absolute;
+            bottom: 10%;
+            right: 20%;
+            }
+        
+        
+        .button {
+        color: black;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        }
+        /* pris dans : https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+        /*W3School*/
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+
+        .button span:after {
+        content: '\00bb';
+        opacity: 0;
+        transition: 0.5s;
+        }
+
+        .button:hover span {
+        padding-right: 25px;
+        }
+
+        .button:hover span:after {
+        opacity: 1;
+        }
+        /*jusqu'ici*/
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <div>
+            <img src="page d inscription.jpg" alt="fond" width="100%" height="auto">
+        </div>
+        
+        <div>
+            <form class="position">
+                <strong><label>Nom</label></strong>
+                    <p></p>
+                <input>
+                    <p></p>
+                <strong><label>Prenom</label></strong>
+                    <p></p>
+                <input>
+                    <p></p>
+                <strong><label>Courrielle</label></strong>
+                    <p></p>
+                <input type="email">
+                    <p></p>
+                <strong><label>Mot de passe</label></strong>
+                    <p></p>
+                <input type="password">
+                    <p></p>
+                <strong><label> Confirmer le Mot de passe</label></strong>
+                    <p></p>
+                <input type="password">
+                    <p></p>
+            </form>
+        </div>
+
+           <p></p>
+        <div class="position_inscription">
+            <button class="button">
+                <span>
+                    inscription 
+                </span>
+            </button>
+            <p>
+                <a href="connexion.html">
+                    vous avez un compte? click ici!
+                </a>
+            </p>
+        </div> 
+    
+    </div>
+</body>
+</html>
