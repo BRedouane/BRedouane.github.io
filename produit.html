@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits/ Red1</title>
+    <style>
+        /*pris dans: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8 */
+        /* ces lignes ont été nétoyer pour ne garder que ce que j'ai besoin*/
+        .flex {
+        display: flex;
+        }
+
+        .flex> div {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 50px;
+        }
+
+        .flex2 {
+        display: flex;
+        }
+
+        .flex2> div {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 25px;
+        }
+
+        /*jusqu'ici*/
+        
+        .button {
+        padding: 16px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 36px;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        }
+        
+        .button1 {
+        background-color: white; 
+        color: black; 
+        }
+        .button2 {
+        float: right;
+        background-color: white; 
+        color: black; 
+        }
+
+        .button1:hover {
+        background-color: black;
+        color: white;
+        }
+
+        .button2:hover {
+        background-color: black;
+        transition-duration: 0.5s;
+        color: white;
+        }
+
+        .text{
+            font: 50px;
+        }
+
+        .img_produit {
+            width: 230px;
+            height: 230px;
+            border: solid black;
+        }
+
+        .img_produit:hover{
+            background-color: lightgrey;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .bar{
+            width: 100%;
+            height: 60px;
+            opacity: 0.3;
+        }
+
+        .couleur{
+            color: red;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+
+        <div class="flex">
+
+            <div>
+            <a href="index.html">
+                <h1 class="button button1">
+                    Acceuil
+                </h1>
+            </a>
+            </div>
+
+            <div> </div>
+            <div> </div>
+            <div><h1>les produits de RED<span class="couleur">1 </span></h1></div>
+            <div> </div>
+            <div> </div>
+
+            <div>
+            <a href="connexion.html">
+                <h1 class="button button2">
+                    connexion
+                </h1>
+            </a>
+            </div>
+        </div>
+
+
+        <div class="flex">
+            <div><img src="pouf.png" alt="un pouf" class="img_produit"></div>
+            <div><img src="tapis.png" alt="un tapis" class="img_produit"></div>
+            <div><img src="lanterne.png" alt="une lanterne" class="img_produit"></div> 
+            <div><img src="banquette.png" alt="une banquette" class="img_produit"></div>
+        </div>
+
+        <div class="flex2">
+            <div > Pouf en cuir(100$)</div>
+            <div> tapis rouge (69$)</div>
+            <div> lanterne en bois (36$)</div> 
+            <div> banquette + matelas (200$)</div>
+        </div>
+
+        <div class="flex">
+            <div><img src="table.png" alt="une table" class="img_produit"></div>
+            <div><img src="deco.png" alt="deco mural" class="img_produit"></div>   
+        </div>
+
+        <div class="flex2">
+            <div > table blanche en bois (150$)</div>
+            <div> decoration murale (300$)</div>
+        </div>
+
+        <div>
+            <img src="fond_gris.jpg" alt="fond" class="bar">
+        </div>
+
+    </div>
+</body>
+</html>
