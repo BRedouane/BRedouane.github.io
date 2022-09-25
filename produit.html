@@ -5,93 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produits/ Red1</title>
-    <style>
-        /*pris dans: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_flex-wrap_nowrap8 */
-        /* ces lignes ont été nétoyer pour ne garder que ce que j'ai besoin*/
-        .flex {
-        display: flex;
-        }
-
-        .flex> div {
-        width: 100%;
-        margin: 10px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 50px;
-        }
-
-        .flex2 {
-        display: flex;
-        }
-
-        .flex2> div {
-        width: 100%;
-        margin: 10px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 25px;
-        }
-
-        /*jusqu'ici*/
-        
-        .button {
-        padding: 16px 32px;
-        text-align: center;
-        display: inline-block;
-        font-size: 36px;
-        transition-duration: 0.3s;
-        cursor: pointer;
-        }
-        
-        .button1 {
-        background-color: white; 
-        color: black; 
-        }
-        .button2 {
-        float: right;
-        background-color: white; 
-        color: black; 
-        }
-
-        .button1:hover {
-        background-color: black;
-        color: white;
-        }
-
-        .button2:hover {
-        background-color: black;
-        transition-duration: 0.5s;
-        color: white;
-        }
-
-        .text{
-            font: 50px;
-        }
-
-        .img_produit {
-            width: 230px;
-            height: 230px;
-            border: solid black;
-        }
-
-        .img_produit:hover{
-            background-color: lightgrey;
-            transition-duration: 0.5s;
-            cursor: pointer;
-        }
-
-        .bar{
-            width: 100%;
-            height: 60px;
-            opacity: 0.3;
-        }
-
-        .couleur{
-            color: red;
-        }
-    </style>
-
-
+    <link rel="icon" href="logo.ico"/>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <div>
@@ -100,7 +16,7 @@
 
             <div>
             <a href="index.html">
-                <h1 class="button button1">
+                <h1 class="button_produit button_produit1">
                     Acceuil
                 </h1>
             </a>
@@ -114,7 +30,7 @@
 
             <div>
             <a href="connexion.html">
-                <h1 class="button button2">
+                <h1 class="button_produit button_produit2">
                     connexion
                 </h1>
             </a>
@@ -130,10 +46,10 @@
         </div>
 
         <div class="flex2">
-            <div > Pouf en cuir(100$)</div>
-            <div> tapis rouge (69$)</div>
-            <div> lanterne en bois (36$)</div> 
-            <div> banquette + matelas (200$)</div>
+            <div > Pouf en cuir(100$) <input type="checkbox"></div> 
+            <div> tapis rouge (69$) <input type="checkbox"></div>
+            <div> lanterne en bois (36$) <input type="checkbox"></div> 
+            <div> banquette + matelas (350$) <input type="checkbox"></div>
         </div>
 
         <div class="flex">
@@ -142,8 +58,12 @@
         </div>
 
         <div class="flex2">
-            <div > table blanche en bois (150$)</div>
-            <div> decoration murale (300$)</div>
+            <div > table blanche en bois (150$) <input type="checkbox"> </div>
+            <div> decoration murale (300$) <input type="checkbox"> </div>
+        </div>
+
+        <div class="flex">
+             <div><h3 class="button_produit button_produit1">acheter</h3> </div>
         </div>
 
         <div>
