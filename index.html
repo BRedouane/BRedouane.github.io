@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Redouane Benomar, développeur full-stack à Montréal : sites et applications web, APIs, intégrations IA et automatisations Python."
+    />
+    <title>Redouane Benomar — Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="intro" aria-hidden="true">
+      <div class="intro-inner">
+        <b><span>RB</span>/DEV</b>
+        <em class="intro-count">000</em>
+      </div>
+      <i class="intro-line"></i>
+    </div>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="dev-cursor" aria-hidden="true">
+      <span class="cursor-left">&lt;</span>
+      <span class="cursor-slash">/</span>
+      <span class="cursor-right">&gt;</span>
+    </div>
+
+    <header class="header">
+      <a class="logo" href="#home" aria-label="Accueil">
+        <span>RB</span><i>/</i>DEV
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="#projects" data-en="Projects">Projets</a>
+        <a href="#disyner" data-en="Disyner">Disyner</a>
+        <a href="#about" data-en="About">À propos</a>
+        <a href="#stack" data-en="Stack">Stack</a>
+        <a href="#contact" data-en="Contact">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <button class="lang" type="button" aria-label="Changer de langue / switch language">
+          <span data-lang="fr" class="is-on">FR</span><i>/</i><span data-lang="en">EN</span>
+        </button>
+        <div class="header-status">
+          <span class="status-dot"></span>
+          <em data-en="Available">Disponible</em>
+        </div>
+      </div>
+
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="mobile-nav" aria-label="Navigation mobile">
+        <a href="#projects" data-en="Projects">Projets</a>
+        <a href="#disyner" data-en="Disyner">Disyner</a>
+        <a href="#about" data-en="About">À propos</a>
+        <a href="#stack" data-en="Stack">Stack</a>
+        <a href="#contact" data-en="Contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-grid" data-parallax="0.06" aria-hidden="true"></div>
+
+        <div class="hero-meta">
+          <p>MONTRÉAL, QC</p>
+          <p><span id="local-time">09:41</span> EST</p>
+        </div>
+
+        <div class="hero-copy">
+          <p class="kicker"><span>01.</span> Portfolio / 2026</p>
+          <h1 data-en="I design, build and &lt;span&gt;automate&lt;/span&gt; complete web products.">
+            Je conçois, code et
+            <span>automatise</span>
+            des produits web complets.
+          </h1>
+          <p class="hero-intro" data-en="Full-stack developer: crafted interfaces, solid back-ends, APIs, AI integrations and Python automations — from the first idea to production.">
+            Développeur full-stack : interfaces soignées, back-ends solides,
+            APIs, intégrations IA et automatisations Python — de l’idée à la
+            mise en production.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" data-magnetic href="#projects" data-en="See my work &lt;span&gt;↘&lt;/span&gt;">Voir mes projets <span>↘</span></a>
+            <a class="button button-ghost" data-magnetic href="#contact" data-en="Get in touch">Me contacter</a>
+          </div>
+        </div>
+
+        <div class="code-card tilt" data-parallax="0.05" aria-label="Extrait de code">
+          <div class="code-topbar">
+            <div><i></i><i></i><i></i></div>
+            <span>redouane.py</span>
+            <span>⌘ K</span>
+          </div>
+          <pre><code><span class="purple">class</span> <span class="orange">Developer</span>:
+    name = <span class="green">"Redouane Benomar"</span>
+    city = <span class="green">"Montréal"</span>
+    stack = [<span class="green">"Python"</span>, <span class="green">"JavaScript"</span>, <span class="green">"React"</span>]
+    builds = [
+        <span class="green">"web apps"</span>,
+        <span class="green">"APIs &amp; integrations"</span>,
+        <span class="green">"AI features"</span>,
+        <span class="green">"automation scripts"</span>,
+    ]
+    available = <span class="orange">True</span>
+
+    <span class="purple">def</span> <span class="green">ship</span>(self, idea):
+        <span class="purple">return</span> self.build(idea).deploy()</code></pre>
+          <div class="code-footer">
+            <span>Python 3.12</span><span>UTF-8</span><span>Ln 14, Col 1</span>
+          </div>
+        </div>
+
+        <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
+      </section>
+
+      <section class="marquee" aria-label="Expertises">
+        <div class="marquee-track">
+          <span>FULL-STACK DEVELOPMENT</span><i>✦</i>
+          <span>PYTHON AUTOMATION</span><i>✦</i>
+          <span>API &amp; INTEGRATIONS</span><i>✦</i>
+          <span>AI FEATURES</span><i>✦</i>
+          <span>WEB PERFORMANCE</span><i>✦</i>
+          <span>FULL-STACK DEVELOPMENT</span><i>✦</i>
+          <span>PYTHON AUTOMATION</span><i>✦</i>
+          <span>API &amp; INTEGRATIONS</span><i>✦</i>
+          <span>AI FEATURES</span><i>✦</i>
+          <span>WEB PERFORMANCE</span><i>✦</i>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="section-top">
+          <p class="kicker"><span>02.</span> Selected work</p>
+          <p class="section-count" data-en="03 PROJECTS">03 PROJETS</p>
+        </div>
+        <h2 data-en="Useful products.&lt;br /&gt;Careful &lt;span&gt;code.&lt;/span&gt;">Des produits utiles.<br />Du code <span>soigné.</span></h2>
+
+        <div class="project-list">
+          <!--
+            ContentOps — seul projet du portfolio qui soit en ligne et
+            vérifiable. Le lien pointe vers l'application réelle, pas vers le
+            formulaire de contact : n'importe qui peut ouvrir l'URL et constater
+            que les données Instagram affichées sont authentiques.
+          -->
+          <article class="project project-featured project-compact">
+            <div class="project-visual dashboard tilt">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+                <p>contentops-one.vercel.app</p>
+              </div>
+              <div class="dashboard-ui tilt-in">
+                <aside>
+                  <b>CONTENTOPS</b>
+                  <i></i><i></i><i></i><i></i>
+                </aside>
+                <div class="dashboard-content">
+                  <p>LIVE · INSTAGRAM · READ-ONLY</p>
+                  <h3>Dashboard</h3>
+                  <div class="metric-row">
+                    <div><small>ACCOUNTS REACHED</small><strong>1,180</strong><em>observed</em></div>
+                    <div><small>PROFILE VIEWS</small><strong>—</strong><em>not available</em></div>
+                  </div>
+                  <div class="chart">
+                    <i style="height: 30%"></i><i style="height: 48%"></i>
+                    <i style="height: 42%"></i><i style="height: 70%"></i>
+                    <i style="height: 58%"></i><i style="height: 88%"></i>
+                    <i style="height: 76%"></i><i style="height: 100%"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!--
+                L'image entière est un lien : le recouvrement est présent même
+                invisible, donc cliquer n'importe où sur la maquette ouvre
+                l'application. Le survol ne fait que révéler ce qui est déjà là.
+              -->
+              <a class="project-overlay" href="https://contentops-one.vercel.app"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Ouvrir ContentOps en ligne">
+                <p data-en="Public read-only showcase of a real Instagram Business account. Meta OAuth, AES-256-GCM encrypted tokens, and a versioned public snapshot served without ever exposing a token, a Graph identifier or a Meta CDN URL. A metric with no data reads &lt;em&gt;Not available&lt;/em&gt; — never a zero.">
+                  Vitrine publique en lecture seule d’un vrai compte Instagram
+                  Business. OAuth Meta, jetons chiffrés en AES-256-GCM et
+                  instantané public versionné, servi sans jamais exposer de
+                  jeton, d’identifiant Graph ni d’URL de CDN Meta. Une métrique
+                  sans donnée affiche <em>Non disponible</em> — jamais un zéro.
+                </p>
+                <ul>
+                  <li>Next.js 15</li><li>TypeScript</li><li>PostgreSQL</li>
+                  <li>Meta Graph API</li><li>OAuth 2.0</li><li>Supabase</li>
+                  <li>Drizzle ORM</li><li>Playwright</li>
+                </ul>
+                <span class="project-overlay-cta">contentops-one.vercel.app ↗</span>
+              </a>
+            </div>
+            <div class="project-copy">
+              <div class="project-number">01 / 03</div>
+              <div>
+                <h3>ContentOps</h3>
+                <p class="project-tagline" data-en="Live application — real Instagram data, read-only.">
+                  Application en ligne — données Instagram réelles, en lecture seule.
+                </p>
+              </div>
+              <a href="https://contentops-one.vercel.app" target="_blank" rel="noopener noreferrer"
+                 data-magnetic aria-label="Ouvrir ContentOps en ligne">↗</a>
+            </div>
+          </article>
+
+          <!--
+            Disypher — second projet réel du portfolio. Trois preuves publiques
+            plutôt qu'une capture : le dépôt, la démonstration en ligne et le
+            paquet publié. Le visuel est un terminal, parce que c'est là que
+            l'outil se montre le mieux.
+          -->
+          <article class="project">
+            <div class="project-visual terminal tilt">
+              <div class="term-window" data-parallax="0.03">
+                <div class="browser-bar">
+                  <span></span><span></span><span></span>
+                  <p>disypher — bash</p>
+                </div>
+                <pre class="term-body"><b>$</b> disypher "Jnxr hc Arb. Gur Zngevk unf lbh."
+
+<i>&gt; ROT13          63%  shift 13  [en]</i>
+    Wake up Neo. The Matrix has you.
+
+<u>(6 more — use --top 7)</u>
+<u>24 letters · index of coincidence 0.036</u>
+<em>Short sample. Analysis unreliable below 40 letters.</em></pre>
+              </div>
+              <a class="project-overlay" href="https://bredouane.github.io/disypher/"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Ouvrir la démonstration Disypher">
+                <p data-en="Fifteen classical ciphers ranked by confidence. Vigen&egrave;re, Beaufort and columnar transposition are broken without the key. The engine refuses to guess: a short sample or an ambiguous result is reported as such, never ranked first as an invention.">
+                  Quinze chiffrements classiques classés par confiance. Vigenère,
+                  Beaufort et la transposition par colonnes sont cassés sans la
+                  clé. Le moteur refuse de deviner : un échantillon court ou un
+                  résultat ambigu est signalé comme tel, jamais présenté comme
+                  une réponse.
+                </p>
+                <ul class="project-overlay-tags">
+                  <li>Python</li><li>PyPI</li><li>Cryptanalyse</li><li>CLI</li>
+                  <li>WebAssembly</li><li>Pyodide</li><li>Zéro dépendance</li><li>MIT</li>
+                </ul>
+                <span class="project-overlay-cta">bredouane.github.io/disypher ↗</span>
+              </a>
+            </div>
+            <div class="project-copy">
+              <div class="project-number">02 / 03</div>
+              <div>
+                <div class="project-head">
+                  <h3>Disypher</h3>
+                  <p class="project-tagline" data-en="Published library — pip install disypher">
+                    Bibliothèque publiée — pip install disypher
+                  </p>
+                </div>
+                <p data-en="Classical cipher analysis engine, in pure Python with no dependencies. Same file runs in a terminal and in a browser through WebAssembly.">
+                  Moteur d'analyse de chiffrements classiques, en Python pur et
+                  sans aucune dépendance. Le même fichier tourne dans un terminal
+                  et dans un navigateur via WebAssembly.
+                </p>
+                <ul><li>Python</li><li>PyPI</li><li>Pyodide</li><li>argparse</li></ul>
+                <p class="project-links">
+                  <a href="https://pypi.org/project/disypher/" target="_blank"
+                     rel="noopener noreferrer">PyPI ↗</a>
+                  <a href="https://github.com/BRedouane/disypher" target="_blank"
+                     rel="noopener noreferrer">GitHub ↗</a>
+                </p>
+              </div>
+              <a href="https://bredouane.github.io/disypher/" target="_blank"
+                 rel="noopener noreferrer" data-magnetic
+                 aria-label="Ouvrir la démonstration Disypher">↗</a>
+            </div>
+          </article>
+
+          <!--
+            Troisième projet annoncé, pas montré. Le code reste privé : c'est un
+            outil commercialisable. Une démonstration rejouant de vraies sorties,
+            sans appel d'API, viendra le représenter.
+          -->
+          <article class="project project-soon">
+            <div class="project-visual pipeline tilt">
+              <div class="pipe-flow" data-parallax="0.04">
+                <div class="pipe-node"><b>3 mots</b><i>brief</i></div>
+                <div class="pipe-arrow"></div>
+                <div class="pipe-node"><b>Texte ×3</b><i>réseaux</i></div>
+                <div class="pipe-arrow"></div>
+                <div class="pipe-node"><b>Visuels</b><i>génération</i></div>
+                <div class="pipe-arrow"></div>
+                <div class="pipe-node"><b>Article</b><i>SEO · WordPress</i></div>
+              </div>
+              <span class="soon-badge" data-en="Coming soon">Bientôt</span>
+            </div>
+            <div class="project-copy">
+              <div class="project-number">03 / 03</div>
+              <div>
+                <div class="project-head">
+                  <h3 data-en="Content pipeline">Chaîne de contenu</h3>
+                  <p class="project-tagline" data-en="Private source — replay demo in preparation">
+                    Source privée — démonstration en préparation
+                  </p>
+                </div>
+                <p data-en="From three words to a published post: copy for three networks, generated images, dated folder tree and an SEO article pushed to WordPress. Every stage is a module that can be switched off.">
+                  De trois mots à une publication : textes pour trois réseaux,
+                  images générées, arborescence datée et article SEO poussé vers
+                  WordPress. Chaque étape est un module désactivable.
+                </p>
+                <ul><li>Python</li><li>OpenAI</li><li>WordPress API</li><li>Automatisation</li></ul>
+              </div>
+              <a href="#contact" data-magnetic
+                 aria-label="Me contacter au sujet de la chaîne de contenu">↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="worlds section" id="disyner">
+        <div class="section-top">
+          <p class="kicker" data-en="&lt;span&gt;03.&lt;/span&gt; Front-end showcase"><span>03.</span> Vitrine front-end</p>
+          <p class="section-count">DISYNER.COM</p>
+        </div>
+        <h2 data-en="One site.&lt;br /&gt;Six &lt;span&gt;universes.&lt;/span&gt;">Un seul site.<br />Six <span>univers.</span></h2>
+        <p class="worlds-intro" data-en="Disyner is my studio: one domain, six complete front-ends sharing the same timeline. Each universe is built from scratch — WebGL, real-time 3D, canvas, CSS animation. Drag the carousel, then go and see them live.">
+          Disyner est mon studio : un seul domaine, six front-ends complets
+          reliés par la même frise. Chaque univers est construit de zéro —
+          WebGL, 3D temps réel, canvas, animation CSS. Faites glisser le
+          carrousel, puis allez les voir en vrai.
+        </p>
+
+        <div class="carousel" id="worlds" tabindex="0" role="region"
+             aria-roledescription="carrousel" aria-label="Les univers Disyner">
+          <div class="c-head">
+            <p class="c-current"><i></i><b>T.0 — ORIGINE</b><em>Disyner</em></p>
+            <a class="c-visit" href="https://disyner.com/" target="_blank" rel="noopener"
+               data-en="Visit this universe &lt;span&gt;↗&lt;/span&gt;">Visiter cet univers <span>↗</span></a>
+          </div>
+          <div class="carousel-stage">
+            <div class="carousel-track">
+          <article class="slide" data-url="https://disyner.com/">
+            <a class="mini-link" href="https://disyner.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--origin" aria-hidden="true"><i class="o-grid"></i><b class="o-tile"><em>Ds</em><u>0</u></b><i class="o-e o-e1"></i><i class="o-e o-e2"></i><i class="o-e o-e3"></i></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.0 — ORIGIN">T.0 — ORIGINE</p>
+              <h3>Disyner</h3>
+              <p class="slide-desc" data-en="The mother site: interactive periodic table, atomic cursor, scroll-driven states comparator.">Le site mère : tableau périodique interactif, curseur atomique, comparateur d’états piloté au scroll.</p>
+              <ul><li>HTML</li><li>CSS</li><li>JS</li><li>Scroll API</li></ul>
+            </div>
+          </article>
+          <article class="slide" data-url="https://disyner.com/nebula/">
+            <a class="mini-link" href="https://disyner.com/nebula/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--nebula" aria-hidden="true"><i class="n-cloud n-c1"></i><i class="n-cloud n-c2"></i><i class="n-cloud n-c3"></i><i class="n-stars"></i><b class="n-word">Nebula</b></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.1 — THE BEGINNING">T.1 — LE DÉBUT</p>
+              <h3>Nebula</h3>
+              <p class="slide-desc" data-en="A single scene crossing seven cosmic ages: WebGL shader, particles and gas on canvas.">Une seule scène qui traverse sept âges cosmiques : shader WebGL, particules et gaz sur canvas.</p>
+              <ul><li>WebGL</li><li>GLSL</li><li>Canvas</li><li>JS</li></ul>
+            </div>
+          </article>
+          <article class="slide" data-url="https://disyner.com/black-rock/">
+            <a class="mini-link" href="https://disyner.com/black-rock/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--rock" aria-hidden="true"><i class="r-rock r-r1"></i><i class="r-rock r-r2"></i><i class="r-rock r-r3"></i><i class="r-line"></i><b class="r-word">D I S Y N E R</b></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.2 — THE VOID">T.2 — LE VIDE</p>
+              <h3>Black Rock</h3>
+              <p class="slide-desc" data-en="The drift: multi-layer parallax, clickable constellation and a Spline 3D scene in the dark.">La dérive : parallaxe multi-couches, constellation cliquable et scène 3D Spline dans le noir.</p>
+              <ul><li>Spline 3D</li><li>Parallax</li><li>Canvas</li><li>SVG</li></ul>
+            </div>
+          </article>
+          <article class="slide" data-url="https://disyner.com/diamond/">
+            <a class="mini-link" href="https://disyner.com/diamond/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--diamond" aria-hidden="true"><i class="d-thread"></i><b class="d-gem"></b><i class="d-shine"></i><b class="d-word">Diamond</b></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.3 — THE PRESSURE">T.3 — LA PRESSION</p>
+              <h3>Diamond</h3>
+              <p class="slide-desc" data-en="Rock turned light: real-time 3D diamond, jeweller cursor and a velvet display tray.">La roche devenue lumière : diamant 3D temps réel, curseur joaillier et plateau de velours.</p>
+              <ul><li>Spline 3D</li><li>CSS 3D</li><li>JS</li><li>IntersectionObserver</li></ul>
+            </div>
+          </article>
+          <article class="slide" data-url="https://disyner.com/nature/">
+            <a class="mini-link" href="https://disyner.com/nature/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--nature" aria-hidden="true"><i class="v-trunk"></i><i class="v-leaf v-l1"></i><i class="v-leaf v-l2"></i><i class="v-leaf v-l3"></i><i class="v-leaf v-l4"></i><b class="v-word">Nature</b></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.4 — LIFE">T.4 — LA VIE</p>
+              <h3>Nature</h3>
+              <p class="slide-desc" data-en="A fully CSS horizontal tree: branches, petioles and leaves computed to the pixel.">Un arbre horizontal entièrement en CSS : branches, pétioles et feuilles calculés au pixel.</p>
+              <ul><li>CSS Grid</li><li>Clip-path</li><li>JS</li><li>A11y</li></ul>
+            </div>
+          </article>
+          <article class="slide" data-url="https://disyner.com/neon/">
+            <a class="mini-link" href="https://disyner.com/neon/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="mini mini--neon" aria-hidden="true"><i class="x-line x-l1"></i><i class="x-line x-l2"></i><i class="x-line x-l3"></i><i class="x-dot x-d1"></i><i class="x-dot x-d2"></i><b class="x-word">NEON</b></div></a>
+            <div class="slide-body">
+              <p class="slide-tag" data-en="T.5 — THE HUMAN">T.5 — L’HUMAIN</p>
+              <h3>Neon</h3>
+              <p class="slide-desc" data-en="The city awake: vector metro map, animated neon and a live contact counter.">La ville qui veille : plan de métro vectoriel, néons animés et guichet de contact en direct.</p>
+              <ul><li>SVG</li><li>CSS anim</li><li>JS</li><li>REST API</li></ul>
+            </div>
+          </article>
+            </div>
+          </div>
+          <div class="carousel-ui">
+            <button class="c-btn c-prev" type="button" aria-label="Univers précédent">←</button>
+            <div class="c-dots"></div>
+            <button class="c-btn c-next" type="button" aria-label="Univers suivant">→</button>
+            <p class="c-count"><b>01</b><span>/ 06</span></p>
+          </div>
+          <div class="c-progress" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-top">
+          <p class="kicker" data-en="&lt;span&gt;04.&lt;/span&gt; About"><span>04.</span> À propos</p>
+          <p class="section-count">OPEN TO WORK</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-title">
+            <h2 data-en="Clean code.&lt;br /&gt;Strong &lt;span&gt;ideas.&lt;/span&gt;">Code propre.<br />Idées <span>fortes.</span></h2>
+            <div class="avatar" aria-label="Monogramme Redouane Benomar">RB</div>
+          </div>
+          <div class="about-content">
+            <p class="large-text" data-en="I'm Redouane, a full-stack developer based in Montréal. I build the interface and everything running behind it.">
+              Je suis Redouane, développeur full-stack basé à Montréal. Je
+              construis autant l’interface que ce qui tourne derrière.
+            </p>
+            <div class="text-columns">
+              <p data-en="My work runs from HTML to deployment: interfaces in JavaScript and React, APIs and back-ends in Python or Node, AI integrations, and scripts that remove repetitive work for good.">
+                Mon travail va du HTML au déploiement : interfaces en
+                JavaScript et React, APIs et back-ends en Python ou Node,
+                intégrations d’IA, et des scripts qui suppriment définitivement
+                les tâches répétitives.
+              </p>
+              <p data-en="I work with startups, studios and small businesses — a website, a custom app, an API, or a script that does in ten seconds what used to take a day.">
+                Je travaille avec des startups, des studios et des PME : un
+                site, une application sur mesure, une API, ou un script qui fait
+                en dix secondes ce qui prenait une journée.
+              </p>
+            </div>
+            <a class="text-link" href="#contact" data-en="Download my CV &lt;span&gt;↓&lt;/span&gt;">Télécharger mon CV <span>↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stack section" id="stack">
+        <div class="section-top">
+          <p class="kicker"><span>05.</span> Technologies</p>
+          <p class="section-count">TOOLS I USE</p>
+        </div>
+        <h2 data-en="My &lt;span&gt;toolbox.&lt;/span&gt;">Ma boîte à <span>outils.</span></h2>
+
+        <!--
+          Quatre cartes, pas cinq : la grille est en `repeat(4, 1fr)` avec des
+          bordures visibles, une cinquième laisserait trois cases vides.
+
+          Le contenu suit ce que les deux projets en ligne démontrent
+          réellement — chiffrement, cryptanalyse, publication d'un paquet,
+          WebAssembly — plutôt que d'allonger une liste de frameworks que
+          personne ne peut vérifier.
+        -->
+        <div class="stack-grid">
+          <article><span>01</span><h3>Frontend</h3><p data-en="HTML &middot; CSS &middot; JavaScript&lt;br /&gt;TypeScript &middot; React 19 &middot; Next.js 15&lt;br /&gt;Tailwind &middot; GSAP &middot; WCAG AA">HTML · CSS · JavaScript<br />TypeScript · React 19 · Next.js 15<br />Tailwind · GSAP · WCAG AA</p></article>
+          <article><span>02</span><h3 data-en="Backend &amp; data">Backend &amp; données</h3><p data-en="Python &middot; Node.js &middot; FastAPI&lt;br /&gt;PostgreSQL &middot; Drizzle ORM &middot; RLS&lt;br /&gt;Supabase &middot; Zod &middot; REST">Python · Node.js · FastAPI<br />PostgreSQL · Drizzle ORM · RLS<br />Supabase · Zod · REST</p></article>
+          <article><span>03</span><h3 data-en="Cryptography &amp; algorithms">Cryptographie &amp; algorithmes</h3><p data-en="Classical cryptanalysis&lt;br /&gt;Frequency analysis &middot; Kasiski&lt;br /&gt;AES-256-GCM &middot; HMAC-SHA-256">Cryptanalyse classique<br />Analyse fréquentielle · Kasiski<br />AES-256-GCM · HMAC-SHA-256</p></article>
+          <article><span>04</span><h3 data-en="Shipping &amp; quality">Livraison &amp; qualité</h3><p data-en="Published on PyPI &middot; semver&lt;br /&gt;WebAssembly &middot; Pyodide &middot; CLI&lt;br /&gt;Git &middot; CI/CD &middot; Vercel &middot; Vitest">Publication PyPI · semver<br />WebAssembly · Pyodide · CLI<br />Git · CI/CD · Vercel · Vitest</p></article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-grid" data-parallax="0.05" aria-hidden="true"></div>
+        <p class="kicker"><span>06.</span> Contact</p>
+        <h2 data-en="Got an idea?&lt;br /&gt;&lt;span&gt;Let's build it.&lt;/span&gt;">Une idée ?<br /><span>Construisons-la.</span></h2>
+        <p class="contact-copy" data-en="Available for freelance work, collaborations and full-time roles — a full product, an API, or a single automation.">
+          Disponible pour des missions freelance, collaborations et postes à
+          temps plein — un produit complet, une API, ou une seule automatisation.
+        </p>
+        <a class="email" data-magnetic href="mailto:hello@redouanebenomar.com">
+          hello@redouanebenomar.com <span>↗</span>
+        </a>
+        <div class="contact-links">
+          <a href="#" aria-label="GitHub">GitHub ↗</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn ↗</a>
+          <a href="#" aria-label="Instagram">Instagram ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 REDOUANE BENOMAR</p>
+      <p>DESIGN & CODE WITH CARE</p>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>

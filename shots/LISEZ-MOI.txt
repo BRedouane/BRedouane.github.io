@@ -1,0 +1,20 @@
+CAPTURES DES UNIVERS — optionnel
+────────────────────────────────
+Les aperçus du carrousel sont recodés en direct (HTML/CSS animé) : le site
+fonctionne parfaitement sans aucune image ici.
+
+Si vous préférez de vraies captures d'écran, déposez-les dans ce dossier
+avec exactement ces noms (jpg, png ou webp — l'un des trois) :
+
+    origin.jpg      →  https://disyner.com/
+    nebula.jpg      →  https://disyner.com/nebula/
+    black-rock.jpg  →  https://disyner.com/black-rock/
+    diamond.jpg     →  https://disyner.com/diamond/
+    nature.jpg      →  https://disyner.com/nature/
+    neon.jpg        →  https://disyner.com/neon/
+
+Elles se fondront automatiquement par-dessus les miniatures au chargement.
+Rien à modifier dans le code.
+
+Conseil de capture : ouvrez la page, attendez 5 secondes que l'intro et le
+préchargeur se terminent, puis capturez le hero (format 16/10, 1600×1000).
