@@ -274,6 +274,14 @@ code { color: #b8b8bd; font: 0.77rem/1.8 var(--mono); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .section { padding: 9rem 5vw; }
+
+/*
+  L'en-tête est en position: fixed. Sans cette marge, une ancre dépose le haut
+  de la section exactement sous la barre, qui recouvre alors son titre : le
+  visiteur arrive au bon endroit mais croit le contraire.
+*/
+section[id],
+[id="home"] { scroll-margin-top: 6.5rem; }
 .section-top {
   display: flex;
   justify-content: space-between;
