@@ -632,8 +632,26 @@
       bar.style.transform = `scaleX(${clamp((base - x) / span, 0, 1).toFixed(3)})`;
     });
 
-    addEventListener("resize", () => { measureCarousel(); go(index); }, { passive: true });
-    if (window.ResizeObserver) new ResizeObserver(() => { measureCarousel(); go(index); }).observe(stage);
+    /* Sur mobile, faire apparaître ou disparaître la barre d'URL change la
+       hauteur du viewport et déclenche un `resize` — plusieurs fois par
+       défilement. Re-mesurer à chaque fois recalait le carrousel en plein
+       geste. Seule une vraie variation de largeur justifie une mesure ; et
+       jamais pendant un glissement, sinon la carte se bat contre le doigt. */
+    let lastW = innerWidth;
+    const remeasure = (force) => {
+      if (dragging) return;
+      if (!force && innerWidth === lastW) return;
+      lastW = innerWidth;
+      measureCarousel();
+      go(index);
+    };
+    addEventListener("resize", () => remeasure(false), { passive: true });
+    addEventListener("orientationchange", () => remeasure(true), { passive: true });
+    if (window.ResizeObserver) {
+      /* la scène, elle, ne bouge en largeur que sur un vrai changement de
+         mise en page : on peut la suivre sans filtre. */
+      new ResizeObserver(() => { if (!dragging) { measureCarousel(); go(index); } }).observe(stage);
+    }
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(() => { measureCarousel(); go(index); });
     }
@@ -643,21 +661,28 @@
     startAuto();
   })();
 
-  /* la souris se déclare elle-même : ni media query, ni supposition.
-     Un stylet ou un écran tactile ne déclenche rien — un vrai déplacement
-     de souris, oui, quel que soit l'appareil. */
+  /* Le pointeur se déclare lui-même : ni media query, ni supposition.
+     Une souris ou un stylet réveille le curseur maison ; un doigt, jamais.
+
+     Le repli `mousemove` ne peut pas cohabiter avec `pointermove` : un appui
+     tactile émet un `mousemove` de compatibilité, dépourvu de `pointerType`,
+     que le filtre laissait passer — d'où le curseur qui apparaissait sur
+     mobile. Il ne sert donc que si PointerEvent n'existe pas. */
   let pointerReady = false;
   const wakePointer = (e) => {
     if (pointerReady) return;
-    if (e.pointerType && e.pointerType !== "mouse") return;
+    if (e.pointerType === "touch") return;
     if (e.type === "pointermove" && e.movementX === 0 && e.movementY === 0) return;
     pointerReady = true;
     removeEventListener("pointermove", wakePointer);
     removeEventListener("mousemove", wakePointer);
     initPointer(e);
   };
-  addEventListener("pointermove", wakePointer, { passive: true });
-  addEventListener("mousemove", wakePointer, { passive: true });
+  if (window.PointerEvent) {
+    addEventListener("pointermove", wakePointer, { passive: true });
+  } else {
+    addEventListener("mousemove", wakePointer, { passive: true });
+  }
 
   /* ─────── 11. DÉPART ─────── */
   registerParallax();

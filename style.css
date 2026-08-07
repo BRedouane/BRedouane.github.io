@@ -523,6 +523,17 @@ body.has-cursor,
 body.has-cursor a,
 body.has-cursor button { cursor: none; }
 
+/* Filet de sécurité : sur un appareil qui n'a aucun pointeur fin — un
+   téléphone tactile — le curseur maison ne doit jamais apparaître, même si le
+   JS se trompait. Une tablette avec stylet déclare `any-pointer: fine` et
+   garde donc le curseur, ce qui est le comportement voulu. */
+@media not all and (any-pointer: fine) {
+  .dev-cursor { display: none !important; }
+  body.has-cursor,
+  body.has-cursor a,
+  body.has-cursor button { cursor: auto; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    MOTION — le système d'animation
    Une seule règle : rien ne bouge sauf transform et opacity.
