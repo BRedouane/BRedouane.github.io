@@ -392,6 +392,62 @@ section[id],
 .text-columns p { color: #5f5f5b; font-size: .85rem; line-height: 1.7; }
 .text-link { display: inline-flex; gap: 2rem; margin-top: 2rem; padding-bottom: .5rem; border-bottom: 1px solid; font: .68rem var(--mono); text-transform: uppercase; }
 
+/* ── section bonus « à propos » : deux volets <details> ── */
+.about-more { margin-top: 4rem; }
+.about-anchor {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  letter-spacing: -.01em;
+  max-width: 46ch;
+  margin-bottom: 2.4rem;
+}
+.about-anchor strong { color: var(--acid); font-weight: 600; }
+
+.about-drop { border-top: 1px solid var(--line); }
+.about-drop:last-of-type { border-bottom: 1px solid var(--line); }
+.about-drop > summary {
+  list-style: none;                 /* retire le triangle par défaut */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem 0;
+  font: .72rem var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--paper);
+  transition: color .25s var(--e-out);
+}
+.about-drop > summary::-webkit-details-marker { display: none; }
+/* le signe qui bascule : + fermé, − ouvert, sans dépendre du triangle natif */
+.about-drop > summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--acid);
+  transition: transform .3s var(--e-out);
+}
+.about-drop[open] > summary::after { content: "−"; }
+.about-drop > summary:hover { color: var(--acid); }
+
+.drop-body { padding: 0 0 1.8rem; max-width: 52ch; }
+.drop-body p {
+  color: #5f5f5b;
+  font-size: .9rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.drop-body p:last-child { margin-bottom: 0; }
+/* ouverture douce, désactivée si le visiteur refuse le mouvement */
+@media (prefers-reduced-motion: no-preference) {
+  .about-drop[open] .drop-body { animation: dropIn .4s var(--e-out); }
+  @keyframes dropIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
 .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .stack-grid article { min-height: 320px; padding: 1.5rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: .25s; }
 .stack-grid article:hover { background: var(--acid); color: var(--ink); transform: translateY(-8px); }
